@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Collegamento al font Barlow -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <style>
+        body {
+            font-family: 'Barlow', sans-serif;
+        }
+
+        footer.footer {
+            background-color: #f8f9fa; /* Sostituisci con il colore desiderato */
+            padding: 10px; /* Aggiunge spaziatura interna per una migliore presentazione */
+        }
+
+        @media (max-width: 767px) {
+            .embed-responsive-16by9 {
+                height: 60vh; /* Regola l'altezza su dispositivi mobili */
+            }
+        }
+    </style>
+    <title>SIGNAL in realtà aumentata</title>
+</head>
+<body>
+
+<!-- Navbar con il logo del prodotto -->
+<nav class="navbar navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand mx-auto" href="#">
+            <img src="IMG/Colored@4x.png" width="150" height="50" alt="Logo di SIGNAL">
+        </a>
+    </div>
+</nav>
+
+<!-- Titolo al centro -->
+<div class="container text-center mt-4">
+    <h1><strong>SIGNAL GEN-1</strong></h1>
+</div>
+
+<!-- Finestra model-viewer per mostrare in AR il prodotto -->
+<div class="container mt-4 mb-5">
+    <div class="embed-responsive embed-responsive-16by9">
+        <!-- Sostituisci 'link_al_tuo_modello.glb' con il percorso al tuo modello 3D in formato glb -->
+        <model-viewer class="embed-responsive-item" style="width: 100%; height: 100%; background-color: white;" src="3D/SIGNAL.glb" ios-src="3D/SIGNAL.usdz" alt="Modello 3D di SIGNAL GEN-1" environment-image="neutral" loading="eager" ar="" ar-scale="auto" auto-rotate="" camera-controls="">
+            <button slot="ar-button" class="btn btn-primary rounded-pill" style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%);">
+                Guardalo in AR
+            </button>
+        </model-viewer>
+    </div>
+</div>
+
+<!-- Footer con una nota di testo -->
+<footer class="footer">
+    <div class="container text-center">
+        <p style="color: grey">© 2023 Enrico Bettella e Matteo Bevilacqua. Laurea in Design del Prodotto Industriale <a href="https://www.unife.it/it" target="_blank">@UNIFE</a> <br> SIGNAL | Design di prodotti e servizi ad alta tecnologia per la sicurezza nella mobilità dolce.</p>
+    </div>
+</footer>
+
+<!-- Script Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Script Model-Viewer -->
+<script type="module" src="https://unpkg.com/model-viewer"></script>
+
+</body>
+</html>
